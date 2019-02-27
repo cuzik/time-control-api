@@ -1,24 +1,48 @@
-# README
+# Time Control
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+aaaaaaaaaa
 
-Things you may want to cover:
+## Dev
 
-* Ruby version
+- install project depedences
 
-* System dependencies
+  - Postgress
+  - Ruby
+  - Rails
 
-* Configuration
+- instlal dependences gems
 
-* Database creation
+```sh
+gem install bundler
 
-* Database initialization
+bundle install
+```
 
-* How to run the test suite
+- config database
 
-* Services (job queues, cache servers, search engines, etc.)
+```sh
+cp config/database.sample.yml config/database.yml
+```
 
-* Deployment instructions
+- create db
 
-* ...
+```sh
+rails db:create
+
+rails db:migrate
+
+rails db:seed
+
+```
+
+- server
+
+```sh
+rails s
+```
+
+## Routes
+
+```sh
+rails routes
+```
