@@ -4,6 +4,12 @@ aaaaaaaaaa
 
 ## Dev
 
+- set .env
+
+```
+DEVISE_JWT_SECRET_KEY= (generate a secret key `rails secret`)
+```
+
 - install project depedences
 
   - Postgress
