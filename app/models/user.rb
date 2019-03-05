@@ -4,4 +4,6 @@ class User < ApplicationRecord
          jwt_revocation_strategy: JWTBlacklist
 
   belongs_to :account
+
+  enum permission: %i[owner adim commun]
 end
