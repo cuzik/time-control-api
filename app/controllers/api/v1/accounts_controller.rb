@@ -46,8 +46,7 @@ module Api
 
       def account_params
         params.require(:account).permit(
-          :name,
-          :document
+          :name
         )
       end
     end
