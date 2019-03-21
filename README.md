@@ -1,47 +1,59 @@
 # Time Control
 
-aaaaaaaaaa
+This is the backend to up API to serve a basic time control system
 
 ## Dev
 
-- set .env
+### set .env file
 
+```sh
+DEVISE_JWT_SECRET_KEY= {secret-key}
 ```
-DEVISE_JWT_SECRET_KEY= (generate a secret key `rails secret`)
-```
 
-- install project depedences
+** to create a secret run `rails secret`
 
-  - Postgress
-  - Ruby
-  - Rails
+### Install project depedences
 
-- instlal dependences gems
+#### Postgress
+
+#### Ruby
+
+#### Rails
+
+
+### instlal dependences gems
 
 ```sh
 gem install bundler
+```
 
+```sh
 bundle install
 ```
 
-- config database
+### Setup DB file config
 
 ```sh
 cp config/database.sample.yml config/database.yml
 ```
 
-- create db
+### Create DB
 
 ```sh
 rails db:create
-
-rails db:migrate
-
-rails db:seed
-
 ```
 
-- server
+### Cosntruct DB
+```sh
+rails db:migrate
+```
+
+### Populate DB
+```sh
+rails db:seed
+```
+
+### up application
 
 ```sh
 rails s
@@ -53,17 +65,28 @@ rails s
 rails routes
 ```
 
-
 ## Docker
 
-build no projeto
+### Build project
 
+```sh
 docker-compose build
+```
 
-criar o banco e migrações
+### Configure and DB struct
 
+```sh
 docker-compose run web rake db:create db:migrate
+```
 
-lavantar o container
+### Populate DB
 
+```sh
+docker-compose run web rake db:seed
+```
+
+### Run the application
+
+```sh
 docker-compose up
+```
